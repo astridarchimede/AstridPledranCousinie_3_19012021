@@ -45,8 +45,8 @@ h2, p, li, span, .icone12, button {
 .bloc-centre {
   text-align: center; }
 
-.c-extrawarmgrey {
-  color: #353535; }
+.c-middlegrey {
+  color: #7E7E7E; }
 
 .c-primarycolor {
   color: #9356DC; }
@@ -145,7 +145,14 @@ header {
 .bloc-restaurant {
   width: 330px;
   height: 250px;
-  border-radius: 80px;
+  border-radius: 20px;
+  margin: 15px 0 15px 0;
   box-shadow: 1px 3px 10px grey; }
+  .bloc-restaurant .sb-restaurant > img {
+    height: 175px;
+    border-radius: 20px 20px 0 0; }
+  .bloc-restaurant .sb-restaurant > figcaption {
+    display: flex;
+    justify-content: space-between; }
 
 /*# sourceMappingURL=style.css.map */

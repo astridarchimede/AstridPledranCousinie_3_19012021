@@ -72,9 +72,9 @@ h2,p,li,span,.icone12,button
     text-align: center;
 }
 
-.c-extrawarmgrey
+.c-middlegrey
 {
-    color: $extra-warm-grey;
+    color: $middle-grey;
 }
 
 .c-primarycolor
@@ -204,6 +204,15 @@ header
 {
     width: 330px;
     height: 250px;
-    border-radius: 80px;
+    border-radius: 20px;
+    margin: 15px 0 15px 0;
     @include box-shadow;
+    .sb-restaurant>img{
+        height: 175px;
+        @include border-top-radius
+    }
+    .sb-restaurant>figcaption{
+        display: flex;
+        justify-content: space-between;
+    }
 }
