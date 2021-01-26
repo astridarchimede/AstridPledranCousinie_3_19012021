@@ -1,0 +1,25 @@
+header
+{
+    box-shadow: 0 0 5px grey;
+    position: relative;
+    padding: 1rem;
+}
+
+.logoheader
+{
+    display: block;
+    margin: auto ;
+    width: 170px;
+}
+
+.header-pageresto
+{
+    height: 60px;
+    div{
+        display: flex;
+        height: 100%;
+        .header-pageresto__fleche{
+            margin: auto 0 auto 0;
+        }
+    }
+}

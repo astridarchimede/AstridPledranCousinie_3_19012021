@@ -1,0 +1,15 @@
+footer>div
+{
+    padding:25px;
+    .logofooter{
+    width: 100px;
+    filter: invert(100%);    
+    }
+    >ul {
+        color: white;
+        line-height: 22px;
+        li>a>i{
+        width: 17px; 
+        }
+    }
+}

@@ -1,0 +1,10 @@
+.btn
+{
+    @include button;
+    &.bnt--w220{
+        @include bnt--w220;
+    }
+    &.btn--w185{
+        @include bnt--w185;
+    }
+}
