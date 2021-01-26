@@ -1,4 +1,4 @@
-header
+.header-main
 {
     box-shadow: 0 0 5px grey;
     position: relative;
@@ -16,10 +16,10 @@ header
 {
     height: 60px;
     div{
-        display: flex;
-        height: 100%;
-        .header-pageresto__fleche{
-            margin: auto 0 auto 0;
-        }
+        padding: 1rem;
+    }
+    .header-pageresto__fleche{
+        position: absolute;
+        top: 20px;
     }
 }
