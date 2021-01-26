@@ -37,14 +37,19 @@ h1
     font-size: 18px;
 }
 
-h2,p,li,span,.icone12,button
+h2,p,li,span,.t12,button
 {
     font-size: 12px;
 }
 
-.t15,.icone15
+.t15
 {
     font-size: 15px;
+}
+
+.t20
+{
+    font-size: 20px;
 }
 
 .typo-light
@@ -62,9 +67,25 @@ h2,p,li,span,.icone12,button
     font-weight: 700;
 }
 
-.icone20
+.majuscule
 {
-    font-size: 20px;
+    text-transform: uppercase;
+}
+
+ul
+{
+    padding: 0;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
 }
 
 .bloc-centre
@@ -140,13 +161,13 @@ header
 
 .btn
 {
-    width: 220px;
-    height: 50px;
-    border-radius: 80px;
-    border: none;
-    background:linear-gradient($color-secondary,$color-primary);
-    color: white;
-    @include box-shadow;
+    @include button;
+    &.bnt--w220{
+        @include bnt--w220;
+    }
+    &.btn--w185{
+        @include bnt--w185;
+    }
 }
 
 /* ---------------------------------------- */
@@ -178,7 +199,7 @@ header
             padding: 5px;
         }
     }
-    .bnt-fonctionnement{
+    .btn-fonctionnement{
         display:flex;
         align-items: center;
         width: 320px;
@@ -192,7 +213,7 @@ header
             padding-left: 25px;
         }
     }
-    .bnt-fonc-violet{
+    .btn-fond-violet{
         background-color: lighten($color-primary, $amount: 33%);
     }
 }
@@ -214,5 +235,86 @@ header
     .sb-restaurant>figcaption{
         display: flex;
         justify-content: space-between;
+        margin: 15px;
+        >div>h2{
+            margin-bottom: 5px;
+        }
     }
 }
+
+/* ---------------------------------------- */
+/* == FOOTER */
+/*---------------------------------------- */
+footer>div
+{
+    padding:25px;
+    .logofooter{
+    width: 100px;
+    filter: invert(100%);    
+    }
+    >ul {
+        color: white;
+        line-height: 22px;
+        li>a>i{
+        width: 17px; 
+        }
+    }
+}
+
+/* ---------------------------------------- */
+/* == PAGE RESTO */
+/*---------------------------------------- */
+.header-pageresto
+{
+    height: 60px;
+}
+
+.img-resto
+{
+    height: 260px;
+}
+
+.bg-pageresto
+{
+    @include bg-pageresto;
+    .head-pageresto{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 35px;
+        h1{
+            font-family: 'Shrikhand', cursive;
+            font-size: 25px;
+        }
+        i{
+            padding-right: 25px;
+        }
+    }
+    .h2menu{
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+        padding-bottom: 8px;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 235px;
+        margin: 15px 0 35px 0;
+        .bloc-plat{
+            @include bloc-plat;
+            .intitule{
+                padding: 15px;
+            }
+            .prix{
+                padding: 0 20px 15px 0;
+            }
+        }
+    }
+    .div-btn-menu{
+        text-align: center;
+    }
+}
+
+
+
+
