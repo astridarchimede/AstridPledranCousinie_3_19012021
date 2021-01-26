@@ -1,7 +1,320 @@
 @import"./utils/variables";
 @import"./utils/mixins";
-@import"./layout/header";
-@import"./layout/footer";
-@import"./base/typography";
-@import"./base/structure";
-@import"./composants/buttons";
+
+/* ----------------------------------------
+TYPO
+font-family: 'Roboto', sans-serif;
+font-family: 'Shrikhand', cursive;
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+/* == GÉNÉRAL */
+/*---------------------------------------- */
+body,section,h1,h2,p,li,span
+{
+    margin:0;
+}
+
+.container
+{
+    padding:50px 20px 60px 20px;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1,h2,p,li,span,button
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1
+{
+    font-size: 18px;
+}
+
+h2,p,li,span,.t12,button
+{
+    font-size: 12px;
+}
+
+.t15
+{
+    font-size: 15px;
+}
+
+.t20
+{
+    font-size: 20px;
+}
+
+.typo-light
+{
+    font-weight: 200;
+}
+
+.typo-bold5
+{
+    font-weight: 500;
+}
+
+.typo-bold7
+{
+    font-weight: 700;
+}
+
+.majuscule
+{
+    text-transform: uppercase;
+}
+
+ul
+{
+    padding: 0;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.bloc-centre
+{
+    text-align: center;
+}
+
+.c-middlegrey
+{
+    color: $middle-grey;
+}
+
+.c-primarycolor
+{
+    color: $color-primary;
+}
+
+.bg-warmgrey
+{
+    background-color: $warm-grey;
+}
+
+.bg-extrawarmgrey
+{
+    background-color: $extra-warm-grey;
+}
+
+.bg-lightgrey
+{
+    background-color: $light-grey;
+}
+
+/* ---------------------------------------- */
+/* == HEADER */
+/*---------------------------------------- */
+header
+{
+    box-shadow: 0 0 5px grey;
+    position: relative;
+    padding: 1rem;
+}
+
+.logoheader
+{
+    display: block;
+    margin: auto ;
+    width: 170px;
+}
+
+/* ---------------------------------------- */
+/* == SECTION 1 */
+/*---------------------------------------- */
+.bloc-ville
+{
+    padding: 15px;
+    color: $extra-warm-grey;
+}
+
+/* ---------------------------------------- */
+/* == SECTION 2 */
+/*---------------------------------------- */
+.section2
+{
+    padding: 35px;
+    .sbs2 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .btn {
+        margin:15px 0 10px 0;
+    }
+}
+
+.btn
+{
+    @include button;
+    &.bnt--w220{
+        @include bnt--w220;
+    }
+    &.btn--w185{
+        @include bnt--w185;
+    }
+}
+
+/* ---------------------------------------- */
+/* == SECTION 3*/
+/*---------------------------------------- */
+.bloc-flex
+{
+    display: flex;
+    height: 270px;
+    margin-top: 30px;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.sb-fonctionnement
+{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    .rond-violet{
+    z-index: 1;
+    background-color: $color-primary;
+    color: white;
+    text-align: center;
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+        >p{
+            padding: 5px;
+        }
+    }
+    .btn-fonctionnement{
+        display:flex;
+        align-items: center;
+        width: 320px;
+        height: 70px;
+        border-radius: 20px;
+        background-color: $demi-blanc;
+        margin-left: -10px;
+        padding-left: 35px;
+        @include box-shadow;
+        >p{
+            padding-left: 25px;
+        }
+    }
+    .btn-fond-violet{
+        background-color: lighten($color-primary, $amount: 33%);
+    }
+}
+
+/* ---------------------------------------- */
+/* == SECTION 4 */
+/*---------------------------------------- */
+.bloc-restaurant
+{
+    width: 330px;
+    height: 250px;
+    border-radius: 20px;
+    margin: 15px 0 15px 0;
+    @include box-shadow;
+    .sb-restaurant>img{
+        height: 175px;
+        @include border-top-radius
+    }
+    .sb-restaurant>figcaption{
+        display: flex;
+        justify-content: space-between;
+        margin: 15px;
+        >div>h2{
+            margin-bottom: 5px;
+        }
+    }
+}
+
+/* ---------------------------------------- */
+/* == FOOTER */
+/*---------------------------------------- */
+footer>div
+{
+    padding:25px;
+    .logofooter{
+    width: 100px;
+    filter: invert(100%);    
+    }
+    >ul {
+        color: white;
+        line-height: 22px;
+        li>a>i{
+        width: 17px; 
+        }
+    }
+}
+
+/* ---------------------------------------- */
+/* == PAGE RESTO */
+/*---------------------------------------- */
+.header-pageresto
+{
+    height: 60px;
+}
+
+.img-resto
+{
+    height: 260px;
+}
+
+.bg-pageresto
+{
+    @include bg-pageresto;
+    .head-pageresto{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 35px;
+        h1{
+            font-family: 'Shrikhand', cursive;
+            font-size: 25px;
+        }
+        i{
+            padding-right: 25px;
+        }
+    }
+    .h2menu{
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+        padding-bottom: 8px;
+    }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 235px;
+        margin: 15px 0 35px 0;
+        .bloc-plat{
+            @include bloc-plat;
+            .intitule{
+                padding: 15px;
+            }
+            .prix{
+                padding: 0 20px 15px 0;
+            }
+        }
+    }
+    .div-btn-menu{
+        text-align: center;
+    }
+}
+
+
+
+
