@@ -84,41 +84,39 @@ ul
     margin-top: 30px;
     justify-content: space-between;
     flex-direction: column;
-}
-
-.bloc-fonctionnement
-{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    .rond-violet{
-    z-index: 1;
-    background-color: $color-primary;
-    color: white;
-    text-align: center;
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
-        >p{
-            padding: 5px;
-        }
-    }
-    .sb-fonctionnement{
-        display:flex;
+    .bloc-fonctionnement{
+        display: flex;
+        justify-content:space-between;
         align-items: center;
-        width: 320px;
-        height: 70px;
-        border-radius: 20px;
-        background-color: $demi-blanc;
-        margin-left: -10px;
-        padding-left: 35px;
-        @include box-shadow;
-        >p{
-            padding-left: 25px;
+        .rond-violet{
+        z-index: 1;
+        background-color: $color-primary;
+        color: white;
+        text-align: center;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+            >p{
+                padding: 5px;
+            }
         }
-    }
-    .sb-fond-violet{
-        background-color: lighten($color-primary, $amount: 33%);
+        .sb-fonctionnement{
+            display:flex;
+            align-items: center;
+            width: 320px;
+            height: 70px;
+            border-radius: 20px;
+            background-color: $demi-blanc;
+            margin-left: -10px;
+            padding-left: 35px;
+            @include box-shadow;
+            >p{
+                padding-left: 25px;
+            }
+        }
+        .sb-fond-violet{
+            background-color: lighten($color-primary, $amount: 33%);
+        }
     }
 }
 
