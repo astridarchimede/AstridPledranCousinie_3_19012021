@@ -20,11 +20,6 @@ ul
     padding: 0;
 }
 
-.bloc-centre
-{
-    text-align: center;
-}
-
 .c-middlegrey
 {
     color: $middle-grey;
@@ -35,6 +30,9 @@ ul
     color: $color-primary;
 }
 
+/* ---------------------------------------- */
+/* == BACKGROUND_COLOR */
+/*---------------------------------------- */
 .bg-warmgrey
 {
     background-color: $warm-grey;
@@ -79,14 +77,12 @@ ul
 /*---------------------------------------- */
 .container-fonctionnement
 {
-    display: flex;
+    @include flex-sbw;
+    flex-direction: column;
     height: 270px;
     margin-top: 30px;
-    justify-content: space-between;
-    flex-direction: column;
     .bloc-fonctionnement{
-        display: flex;
-        justify-content:space-between;
+        @include flex-sbw;
         align-items: center;
         .rond-violet{
         z-index: 1;
@@ -105,10 +101,10 @@ ul
             align-items: center;
             width: 320px;
             height: 70px;
-            border-radius: 20px;
             background-color: $demi-blanc;
             margin-left: -10px;
             padding-left: 35px;
+            @include border-radius-main;
             @include box-shadow;
             >p{
                 padding-left: 25px;
@@ -125,18 +121,15 @@ ul
 /*---------------------------------------- */
 .bloc-restaurant
 {
-    width: 330px;
-    height: 250px;
-    border-radius: 20px;
-    margin: 15px 0 15px 0;
+    @include blocresto-mainpage;
+    @include border-radius-main;
     @include box-shadow;
     .sb-restaurant>img{
         height: 175px;
         @include border-top-radius
     }
     .sb-restaurant>figcaption{
-        display: flex;
-        justify-content: space-between;
+        @include flex-sbw;
         margin: 15px;
         >div>h2{
             margin-bottom: 5px;
@@ -147,7 +140,6 @@ ul
 /* ---------------------------------------- */
 /* == PAGE RESTO */
 /*---------------------------------------- */
-
 .img-resto
 {
     height: 260px;
@@ -157,13 +149,8 @@ ul
 {
     @include bg-pageresto;
     .head-pageresto{
-        display: flex;
-        justify-content: space-between;
+        @include flex-sbw;
         padding-bottom: 35px;
-        h1{
-            font-family: 'Shrikhand', cursive;
-            font-size: 25px;
-        }
         i{
             padding-right: 25px;
         }
@@ -174,8 +161,7 @@ ul
         padding-bottom: 8px;
     }
     .menu{
-        display: flex;
-        justify-content: space-between;
+        @include flex-sbw;
         flex-direction: column;
         height: 235px;
         margin: 15px 0 35px 0;

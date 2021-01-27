@@ -32,6 +32,10 @@ footer > div {
 h1, h2, p, li, span, button {
   font-family: 'Roboto', sans-serif; }
 
+.h1resto {
+  font-family: 'Shrikhand', cursive;
+  font-size: 25px; }
+
 h1 {
   font-size: 18px; }
 
@@ -63,6 +67,9 @@ a {
   text-decoration: none;
   color: inherit; }
 
+.bloc-centre {
+  text-align: center; }
+
 body, section, h1, h2, p, li, span {
   margin: 0; }
 
@@ -77,15 +84,15 @@ img {
 ul {
   padding: 0; }
 
-.bloc-centre {
-  text-align: center; }
-
 .c-middlegrey {
   color: #7E7E7E; }
 
 .c-primarycolor {
   color: #9356DC; }
 
+/* ---------------------------------------- */
+/* == BACKGROUND_COLOR */
+/*---------------------------------------- */
 .bg-warmgrey {
   background-color: #EAEAEA; }
 
@@ -118,10 +125,10 @@ ul {
 /*---------------------------------------- */
 .container-fonctionnement {
   display: flex;
-  height: 270px;
-  margin-top: 30px;
   justify-content: space-between;
-  flex-direction: column; }
+  flex-direction: column;
+  height: 270px;
+  margin-top: 30px; }
   .container-fonctionnement .bloc-fonctionnement {
     display: flex;
     justify-content: space-between;
@@ -141,10 +148,10 @@ ul {
       align-items: center;
       width: 320px;
       height: 70px;
-      border-radius: 20px;
       background-color: #F6F6F6;
       margin-left: -10px;
       padding-left: 35px;
+      border-radius: 20px;
       box-shadow: 1px 3px 10px grey; }
       .container-fonctionnement .bloc-fonctionnement .sb-fonctionnement > p {
         padding-left: 25px; }
@@ -157,8 +164,8 @@ ul {
 .bloc-restaurant {
   width: 330px;
   height: 250px;
-  border-radius: 20px;
   margin: 15px 0 15px 0;
+  border-radius: 20px;
   box-shadow: 1px 3px 10px grey; }
   .bloc-restaurant .sb-restaurant > img {
     height: 175px;
@@ -186,9 +193,6 @@ ul {
     display: flex;
     justify-content: space-between;
     padding-bottom: 35px; }
-    .bg-pageresto .head-pageresto h1 {
-      font-family: 'Shrikhand', cursive;
-      font-size: 25px; }
     .bg-pageresto .head-pageresto i {
       padding-right: 25px; }
   .bg-pageresto .h2menu {
