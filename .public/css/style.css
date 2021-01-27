@@ -117,8 +117,6 @@ ul {
   .section2 .sbs2 {
     padding-top: 10px;
     padding-bottom: 10px; }
-  .section2 .btn {
-    margin: 15px 0 10px 0; }
 
 /* ---------------------------------------- */
 /* == SECTION 3*/
@@ -234,5 +232,8 @@ ul {
     width: 220px; }
   .btn.btn--w185 {
     width: 185px; }
+
+.section2 .btn {
+  margin: 15px 0 10px 0; }
 
 /*# sourceMappingURL=style.css.map */
