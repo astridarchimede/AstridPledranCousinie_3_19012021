@@ -15,6 +15,21 @@
     justify-content: space-between;
 }
 
+@mixin flex-c {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin new {
+    background-color: $color-tertiary;
+    color: $darken-tertiary;
+    border-radius: 5px;
+    padding: 7px;
+    position:absolute;
+    margin: 10px 0 0 255px;
+    font-weight: 500;
+}
+
 @mixin hover-ligthen{
     box-shadow: 1px 3px 14px grey;
     background: $lighten-colors-gradient;
@@ -43,7 +58,7 @@
 @mixin blocresto-mainpage {
     width: 330px;
     height: 250px;
-    margin: 15px 0 15px 0;   
+    margin: 15px;   
 }
 
 @mixin bg-pageresto {

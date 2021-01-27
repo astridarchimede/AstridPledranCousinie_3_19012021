@@ -18,12 +18,21 @@
 
 footer > div {
   padding: 25px; }
+  @media (min-width: 768px) {
+    footer > div {
+      text-align: center; } }
   footer > div .logofooter {
     width: 100px;
     filter: invert(100%); }
   footer > div > ul {
     color: white;
     line-height: 22px; }
+    @media (min-width: 1025px) {
+      footer > div > ul {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding: 0 200px 0 200px; } }
     footer > div > ul li > a > i {
       width: 17px; }
 
@@ -39,6 +48,10 @@ h1 {
 
 h2, p, li, span, .t12, button {
   font-size: 12px; }
+
+@media (min-width: 768px) {
+  .sb-restaurant > figcaption > div > h2 {
+    font-size: 14px; } }
 
 .t15 {
   font-size: 15px; }
@@ -131,13 +144,18 @@ ul {
   justify-content: space-between;
   flex-direction: column;
   height: 270px; }
+  @media (min-width: 1025px) {
+    .container-fonctionnement {
+      flex-direction: row;
+      justify-content: space-around;
+      height: auto; } }
   .container-fonctionnement .bloc-fonctionnement {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center; }
-    @media (min-width: 768px) {
+    @media (min-width: 1025px) {
       .container-fonctionnement .bloc-fonctionnement {
-        justify-content: center; } }
+        margin: auto 15px auto 15px; } }
     .container-fonctionnement .bloc-fonctionnement .rond-violet {
       z-index: 1;
       background-color: #9356DC;
@@ -158,6 +176,9 @@ ul {
       padding-left: 35px;
       border-radius: 20px;
       box-shadow: 1px 3px 10px grey; }
+      @media (min-width: 1025px) {
+        .container-fonctionnement .bloc-fonctionnement .sb-fonctionnement {
+          width: 270px; } }
       .container-fonctionnement .bloc-fonctionnement .sb-fonctionnement > p {
         padding-left: 30px; }
     .container-fonctionnement .bloc-fonctionnement .sb-fond-violet {
@@ -166,21 +187,31 @@ ul {
 /* ---------------------------------------- */
 /* == SECTION 4 */
 /*---------------------------------------- */
-@media (min-width: 768px) {
-  .container-resto {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap; } }
+.container-resto {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  @media (min-width: 768px) {
+    .container-resto {
+      flex-flow: row wrap; } }
 
 .bloc-restaurant {
   width: 330px;
   height: 250px;
-  margin: 15px 0 15px 0;
+  margin: 15px;
   border-radius: 20px;
   box-shadow: 1px 3px 10px grey; }
   .bloc-restaurant .sb-restaurant > img {
     height: 175px;
     border-radius: 20px 20px 0 0; }
+  .bloc-restaurant .new {
+    background-color: #99E2D0;
+    color: #1b6150;
+    border-radius: 5px;
+    padding: 7px;
+    position: absolute;
+    margin: 10px 0 0 255px;
+    font-weight: 500; }
   .bloc-restaurant .sb-restaurant > figcaption {
     display: flex;
     justify-content: space-between;
@@ -249,7 +280,7 @@ ul {
   .btn.btn--w185 {
     width: 185px; }
 
-.section2 .btn {
+.section-presentation > .btn {
   margin: 15px 0 10px 0; }
 
 /*# sourceMappingURL=style.css.map */

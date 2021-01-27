@@ -82,11 +82,16 @@ ul
     @include flex-sbw;
     flex-direction: column;
     height: 270px;
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        flex-direction: row;
+        justify-content: space-around;
+        height: auto;
+    }
     .bloc-fonctionnement{
-        @include flex-sbw;
+        @include flex-c;
         align-items: center;
-        @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
-            justify-content: center;
+        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+            margin: auto 15px auto 15px;
         }
         .rond-violet{
         z-index: 1;
@@ -110,6 +115,9 @@ ul
             padding-left: 35px;
             @include border-radius-main;
             @include box-shadow;
+            @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+                width: 270px;
+            }
             >p{
                 padding-left: 30px;
             }
@@ -125,9 +133,9 @@ ul
 /*---------------------------------------- */
 .container-resto
 {
+    @include flex-c;
+    flex-wrap: wrap;
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
-        display: flex;
-        justify-content: center;
         flex-flow: row wrap;
     }
 }
@@ -140,6 +148,9 @@ ul
     .sb-restaurant>img{
         height: 175px;
         @include border-top-radius
+    }
+    .new{
+        @include new;
     }
     .sb-restaurant>figcaption{
         @include flex-sbw;

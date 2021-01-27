@@ -1,6 +1,9 @@
 footer>div
 {
     padding:25px;
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        text-align: center;            
+    }
     .logofooter{
     width: 100px;
     filter: invert(100%);    
@@ -8,6 +11,11 @@ footer>div
     >ul {
         color: white;
         line-height: 22px;
+        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+            @include flex-sbw;
+            text-align: center;
+            padding: 0 200px 0 200px;
+        }
         li>a>i{
         width: 17px; 
         }
