@@ -170,6 +170,9 @@ ul
 .img-resto
 {
     height: 260px;
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        height: 450px;
+    }
 }
 
 .bg-pageresto
@@ -186,14 +189,29 @@ ul
         border-bottom: 3px solid $color-tertiary;
         width: 40px;
         padding-bottom: 8px;
+        @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+            font-size: 14px;
+        }
+        @media (min-width:map-get($map: $breakpoints, $key: tablette))and (max-width:map-get($map: $breakpoints, $key: desktop)) {
+            margin-left: 20%; 
+        }
     }
     .menu{
         @include flex-sbw;
         flex-direction: column;
+        align-items: center;
         height: 235px;
         margin: 15px 0 35px 0;
-        .bloc-plat{
+        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+            flex-direction: row;
+            justify-content: center;
+            height: auto;
+        }
+            .bloc-plat{
             @include bloc-plat;
+            @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+                margin: 15px;
+            }
             .intitule{
                 padding: 15px;
             }
