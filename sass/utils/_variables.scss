@@ -8,8 +8,12 @@ $middle-grey:#7E7E7E;
 $light-grey: #F6F6F6;
 $demi-blanc:#F6F6F6;
 
-/*GESTION-Dégradé couleur*/
 $main-colors-gradient:linear-gradient($color-secondary,$color-primary);
 $lighten-primary:lighten($color:$color-primary,$amount:5);
 $lighten-secondary:lighten($color:$color-secondary,$amount:5);
 $lighten-colors-gradient:linear-gradient($lighten-secondary,$lighten-primary);
+
+$breakpoints:(
+    tablette:768px,
+    desktop:1025px
+)

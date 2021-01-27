@@ -64,3 +64,10 @@ a
 {
     text-align: center;
 }
+
+.h1main
+{
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        text-align: center;
+    }
+}

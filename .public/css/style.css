@@ -1,5 +1,3 @@
-@charset "UTF-8";
-/*GESTION-Dégradé couleur*/
 .header-main {
   box-shadow: 0 0 5px grey;
   position: relative;
@@ -70,6 +68,10 @@ a {
 .bloc-centre {
   text-align: center; }
 
+@media (min-width: 768px) {
+  .h1main {
+    text-align: center; } }
+
 body, section, h1, h2, p, li, span {
   margin: 0; }
 
@@ -112,25 +114,30 @@ ul {
 /* ---------------------------------------- */
 /* == SECTION 2 */
 /*---------------------------------------- */
-.section2 {
+.section-presentation {
   padding: 35px; }
-  .section2 .sbs2 {
+  .section-presentation .sbs2 {
     padding-top: 10px;
     padding-bottom: 10px; }
 
 /* ---------------------------------------- */
 /* == SECTION 3*/
 /*---------------------------------------- */
+.h1main {
+  margin-bottom: 30px; }
+
 .container-fonctionnement {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 270px;
-  margin-top: 30px; }
+  height: 270px; }
   .container-fonctionnement .bloc-fonctionnement {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media (min-width: 768px) {
+      .container-fonctionnement .bloc-fonctionnement {
+        justify-content: center; } }
     .container-fonctionnement .bloc-fonctionnement .rond-violet {
       z-index: 1;
       background-color: #9356DC;
@@ -152,13 +159,19 @@ ul {
       border-radius: 20px;
       box-shadow: 1px 3px 10px grey; }
       .container-fonctionnement .bloc-fonctionnement .sb-fonctionnement > p {
-        padding-left: 25px; }
+        padding-left: 30px; }
     .container-fonctionnement .bloc-fonctionnement .sb-fond-violet {
       background-color: #ece1f9; }
 
 /* ---------------------------------------- */
 /* == SECTION 4 */
 /*---------------------------------------- */
+@media (min-width: 768px) {
+  .container-resto {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap; } }
+
 .bloc-restaurant {
   width: 330px;
   height: 250px;
@@ -174,6 +187,9 @@ ul {
     margin: 15px; }
     .bloc-restaurant .sb-restaurant > figcaption > div > h2 {
       margin-bottom: 5px; }
+  @media (min-width: 768px) {
+    .bloc-restaurant {
+      margin: 15px; } }
 
 /* ---------------------------------------- */
 /* == PAGE RESTO */

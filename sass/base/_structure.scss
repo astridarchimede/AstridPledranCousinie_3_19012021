@@ -60,7 +60,7 @@ ul
 /* ---------------------------------------- */
 /* == SECTION 2 */
 /*---------------------------------------- */
-.section2
+.section-presentation
 {
     padding: 35px;
     .sbs2 {
@@ -72,15 +72,22 @@ ul
 /* ---------------------------------------- */
 /* == SECTION 3*/
 /*---------------------------------------- */
+.h1main
+{
+    margin-bottom: 30px;
+}
+
 .container-fonctionnement
 {
     @include flex-sbw;
     flex-direction: column;
     height: 270px;
-    margin-top: 30px;
     .bloc-fonctionnement{
         @include flex-sbw;
         align-items: center;
+        @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+            justify-content: center;
+        }
         .rond-violet{
         z-index: 1;
         background-color: $color-primary;
@@ -104,7 +111,7 @@ ul
             @include border-radius-main;
             @include box-shadow;
             >p{
-                padding-left: 25px;
+                padding-left: 30px;
             }
         }
         .sb-fond-violet{
@@ -116,6 +123,15 @@ ul
 /* ---------------------------------------- */
 /* == SECTION 4 */
 /*---------------------------------------- */
+.container-resto
+{
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+}
+
 .bloc-restaurant
 {
     @include blocresto-mainpage;
@@ -131,6 +147,9 @@ ul
         >div>h2{
             margin-bottom: 5px;
         }
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        margin: 15px;       
     }
 }
 
