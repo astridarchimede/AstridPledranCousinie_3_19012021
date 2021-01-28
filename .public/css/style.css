@@ -280,8 +280,6 @@ ul {
         padding: 15px; }
       .bg-pageresto .menu .bloc-plat .prix {
         padding: 0 20px 15px 0; }
-  .bg-pageresto .div-btn-menu {
-    text-align: center; }
 
 .btn {
   height: 50px;
@@ -300,5 +298,8 @@ ul {
 
 .section-presentation > .btn {
   margin: 15px 0 10px 0; }
+
+.div-btn-menu {
+  text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
