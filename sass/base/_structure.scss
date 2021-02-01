@@ -207,17 +207,17 @@ ul
             justify-content: center;
             height: auto;
         }
-            .bloc-plat{
-            @include bloc-plat;
-            @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
-                margin: 15px;
-            }
-            .intitule{
-                padding: 15px;
-            }
-            .prix{
-                padding: 0 20px 15px 0;
-            }
+        .bloc-plat{
+        @include bloc-plat;
+        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+            margin: 15px;
+        }
+        }      
+        .intitule{
+            padding: 15px;
+        }
+        .prix{
+            padding: 0 20px 15px 0;
         }
     }
 }

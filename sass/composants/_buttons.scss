@@ -28,9 +28,11 @@
 }
 
 .bloc-plat{
-    transition: transform 7000ms ease-in-out;
-    &:hover>.btn-confirmation{
-        display: block;
-        transform: translateX(-100%,0);
+    &:hover{
+        >.btn-confirmation{
+            transform: translateY(1));
+            animation-name: validation-commande;
+            animation-duration: 2000ms;
+        }
     }
 }
