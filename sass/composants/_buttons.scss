@@ -17,3 +17,20 @@
 .div-btn-menu{
     text-align: center;
 }
+
+.btn-confirmation{
+    display: none;
+    @include btn-confirmation;
+    .check-confirmation{
+        @include check-confirmation;
+    
+    }
+}
+
+.bloc-plat{
+    transition: transform 7000ms ease-in-out;
+    &:hover>.btn-confirmation{
+        display: block;
+        transform: translateX(-100%,0);
+    }
+}

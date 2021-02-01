@@ -10,6 +10,10 @@
     border-radius: 20px 20px 0 0;
 }
 
+@mixin border-right-radius {
+    border-radius: 0 20px 20px 0;
+}
+
 @mixin flex-sbw {
     display: flex;
     justify-content: space-between;
@@ -77,4 +81,19 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    cursor: pointer;
+}
+
+@mixin btn-confirmation {
+    height: 100%;
+    width: 60px;
+    background-color: $color-tertiary;
+    @include border-right-radius;
+}
+
+@mixin check-confirmation {
+    @include flex-c;
+    align-items: center;
+    height: 68px;
+    color: white;
 }

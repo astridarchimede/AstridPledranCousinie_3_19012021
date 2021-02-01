@@ -272,7 +272,8 @@ ul {
       background-color: white;
       display: flex;
       justify-content: space-between;
-      align-items: flex-end; }
+      align-items: flex-end;
+      cursor: pointer; }
       @media (min-width: 1025px) {
         .bg-pageresto .menu .bloc-plat {
           margin: 15px; } }
@@ -301,5 +302,24 @@ ul {
 
 .div-btn-menu {
   text-align: center; }
+
+.btn-confirmation {
+  display: none;
+  height: 100%;
+  width: 60px;
+  background-color: #99E2D0;
+  border-radius: 0 20px 20px 0; }
+  .btn-confirmation .check-confirmation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68px;
+    color: white; }
+
+.bloc-plat {
+  transition: transform 7000ms ease-in-out; }
+  .bloc-plat:hover > .btn-confirmation {
+    display: block;
+    transform: translateX(-100%, 0); }
 
 /*# sourceMappingURL=style.css.map */
