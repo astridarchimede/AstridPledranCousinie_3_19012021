@@ -175,12 +175,13 @@ ul
     }
 }
 
-.bg-pageresto
+.pageresto__bg
 {
     @include bg-pageresto;
-    .head-pageresto{
+    .pageresto__head{
         @include flex-sbw;
         padding-bottom: 35px;
+        align-items: center;
         i{
             padding-right: 25px;
         }
@@ -207,16 +208,16 @@ ul
             justify-content: center;
             height: auto;
         }
-        .bloc-plat{
+        &__blocplat{
         @include bloc-plat;
         @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
             margin: 15px;
         }
         }      
-        .intitule{
+        &__intitule{
             padding: 15px;
         }
-        .prix{
+        &__prix{
             padding: 0 20px 15px 0;
         }
     }

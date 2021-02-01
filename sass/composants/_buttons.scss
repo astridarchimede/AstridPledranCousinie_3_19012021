@@ -21,18 +21,16 @@
 .btn-confirmation{
     display: none;
     @include btn-confirmation;
-    .check-confirmation{
+    &__check{
         @include check-confirmation;
-    
     }
 }
 
-.bloc-plat{
-    &:hover{
-        >.btn-confirmation{
-            transform: translateY(1));
-            animation-name: validation-commande;
-            animation-duration: 2000ms;
-        }
+.menu__blocplat:hover{
+    .btn-confirmation {
+        display: block;
+        transform: translateX(-100px,0);    
+        animation-name: validation-commande;
+        animation-duration: 3000ms;
     }
 }
