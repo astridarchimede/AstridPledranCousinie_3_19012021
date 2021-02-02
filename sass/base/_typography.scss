@@ -19,7 +19,7 @@ h2,p,li,span,.t12,button
     font-size: 12px;
 }
 
-.sb-restaurant>figcaption>div>h2
+.card__sousbloc>figcaption>div>h2
 {
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
         font-size: 14px;

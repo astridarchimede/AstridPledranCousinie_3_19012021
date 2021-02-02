@@ -60,10 +60,10 @@ ul
 /* ---------------------------------------- */
 /* == SECTION 2 */
 /*---------------------------------------- */
-.section-presentation
+.presentation
 {
     padding: 35px;
-    .sbs2 {
+    &__sousbloc {
         padding-top: 10px;
         padding-bottom: 10px;
     }
@@ -105,7 +105,7 @@ ul
                 padding: 5px;
             }
         }
-        .sb-fonctionnement{
+        &__sb{
             display:flex;
             align-items: center;
             width: 320px;
@@ -140,27 +140,57 @@ ul
     }
 }
 
-.bloc-restaurant
+.card
 {
     @include blocresto-mainpage;
     @include border-radius-main;
     @include box-shadow;
-    .sb-restaurant>img{
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        margin: 15px;       
+    }
+}
+
+.card__sousbloc
+{
+    img{
         height: 175px;
         @include border-top-radius
     }
     .new{
         @include new;
     }
-    .sb-restaurant>figcaption{
+    figcaption{
         @include flex-sbw;
         margin: 15px;
         >div>h2{
             margin-bottom: 5px;
         }
     }
-    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
-        margin: 15px;       
+}
+
+.like
+{
+    position: relative;
+    right: 20px;
+    top: 7px;
+    .coeur-bg{
+        opacity: 0;
+        color: $color-secondary;
+        position: absolute;
+    }
+    .coeur-nobg{
+        position: absolute;
+    }
+    &:hover{
+        .coeur-bg{
+            display: block;
+            opacity: 1;
+            transition: 1s;
+        }
+        .coeur-nobg{
+            opacity: 0;
+            transition: 1s;
+        }
     }
 }
 

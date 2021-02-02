@@ -50,7 +50,7 @@ h2, p, li, span, .t12, button {
   font-size: 12px; }
 
 @media (min-width: 768px) {
-  .sb-restaurant > figcaption > div > h2 {
+  .card__sousbloc > figcaption > div > h2 {
     font-size: 14px; } }
 
 .t15 {
@@ -127,9 +127,9 @@ ul {
 /* ---------------------------------------- */
 /* == SECTION 2 */
 /*---------------------------------------- */
-.section-presentation {
+.presentation {
   padding: 35px; }
-  .section-presentation .sbs2 {
+  .presentation__sousbloc {
     padding-top: 10px;
     padding-bottom: 10px; }
 
@@ -166,7 +166,7 @@ ul {
       height: 25px; }
       .container-fonctionnement .bloc-fonctionnement .rond-violet > p {
         padding: 5px; }
-    .container-fonctionnement .bloc-fonctionnement .sb-fonctionnement {
+    .container-fonctionnement .bloc-fonctionnement__sb {
       display: flex;
       align-items: center;
       width: 320px;
@@ -177,9 +177,9 @@ ul {
       border-radius: 20px;
       box-shadow: 1px 3px 10px grey; }
       @media (min-width: 1025px) {
-        .container-fonctionnement .bloc-fonctionnement .sb-fonctionnement {
+        .container-fonctionnement .bloc-fonctionnement__sb {
           width: 270px; } }
-      .container-fonctionnement .bloc-fonctionnement .sb-fonctionnement > p {
+      .container-fonctionnement .bloc-fonctionnement__sb > p {
         padding-left: 30px; }
     .container-fonctionnement .bloc-fonctionnement .sb-fond-violet {
       background-color: #ece1f9; }
@@ -195,32 +195,51 @@ ul {
     .container-resto {
       flex-flow: row wrap; } }
 
-.bloc-restaurant {
+.card {
   width: 330px;
   height: 250px;
   margin: 15px;
   border-radius: 20px;
   box-shadow: 1px 3px 10px grey; }
-  .bloc-restaurant .sb-restaurant > img {
-    height: 175px;
-    border-radius: 20px 20px 0 0; }
-  .bloc-restaurant .new {
-    background-color: #99E2D0;
-    color: #1b6150;
-    border-radius: 5px;
-    padding: 7px;
-    position: absolute;
-    margin: 10px 0 0 255px;
-    font-weight: 500; }
-  .bloc-restaurant .sb-restaurant > figcaption {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px; }
-    .bloc-restaurant .sb-restaurant > figcaption > div > h2 {
-      margin-bottom: 5px; }
   @media (min-width: 768px) {
-    .bloc-restaurant {
+    .card {
       margin: 15px; } }
+
+.card__sousbloc img {
+  height: 175px;
+  border-radius: 20px 20px 0 0; }
+.card__sousbloc .new {
+  background-color: #99E2D0;
+  color: #1b6150;
+  border-radius: 5px;
+  padding: 7px;
+  position: absolute;
+  margin: 10px 0 0 230px;
+  font-weight: 500; }
+.card__sousbloc figcaption {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px; }
+  .card__sousbloc figcaption > div > h2 {
+    margin-bottom: 5px; }
+
+.like {
+  position: relative;
+  right: 20px;
+  top: 7px; }
+  .like .coeur-bg {
+    opacity: 0;
+    color: #FF79DA;
+    position: absolute; }
+  .like .coeur-nobg {
+    position: absolute; }
+  .like:hover .coeur-bg {
+    display: block;
+    opacity: 1;
+    transition: 1s; }
+  .like:hover .coeur-nobg {
+    opacity: 0;
+    transition: 1s; }
 
 /* ---------------------------------------- */
 /* == PAGE RESTO */
@@ -298,7 +317,7 @@ ul {
   .btn.btn--w185 {
     width: 185px; }
 
-.section-presentation > .btn {
+.presentation > .btn {
   margin: 15px 0 10px 0; }
 
 .div-btn-menu {
