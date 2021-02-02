@@ -168,37 +168,12 @@ ul
     }
 }
 
-.like
-{
-    position: relative;
-    right: 20px;
-    top: 7px;
-    .coeur-bg{
-        opacity: 0;
-        color: $color-secondary;
-        position: absolute;
-    }
-    .coeur-nobg{
-        position: absolute;
-    }
-    &:hover{
-        .coeur-bg{
-            display: block;
-            opacity: 1;
-            transition: 1s;
-        }
-        .coeur-nobg{
-            opacity: 0;
-            transition: 1s;
-        }
-    }
-}
-
 /* ---------------------------------------- */
 /* == PAGE RESTO */
 /*---------------------------------------- */
 .img-resto
 {
+    vertical-align: middle;
     height: 260px;
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
         height: 450px;
@@ -211,7 +186,6 @@ ul
     .pageresto__head{
         @include flex-sbw;
         padding-bottom: 35px;
-        align-items: center;
         i{
             padding-right: 25px;
         }

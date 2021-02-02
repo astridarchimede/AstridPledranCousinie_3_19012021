@@ -1,8 +1,38 @@
-@keyframes validation-commande{
-    0% {
-        transform: translateX(100);
-      }
-      100% {
-        transform: translateX(0);
-      }
+.like
+{
+    position: relative;
+    right: 20px;
+    top: 7px;
+    .coeur-bg{
+        opacity: 0;
+        color: $color-secondary;
+        position: absolute;
+    }
+    .coeur-nobg{
+        position: absolute;
+    }
+    &:hover{
+        .coeur-bg{
+            opacity: 1;
+            transition: 1s;
+        }
+        .coeur-nobg{
+            opacity: 0;
+            transition: 1s;
+        }
+    }
 }
+//    &:active{
+//////      .coeur-bg{
+//////       opacity: 1;
+//////       transition: 1s;
+//////       animation-fill-mode: forwards;
+//      }
+//      .coeur-nobg{
+//////       opacity: 0;
+//////       transition: 1s;
+//////       animation-fill-mode: forwards;
+//      } 
+//    }
+//}
+
