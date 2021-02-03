@@ -77,12 +77,15 @@
     width: 350px;
     height: 68px;
     border-radius: 15px;
-    background-color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    background-color: white;
     cursor: pointer;
+    vertical-align: middle;
+    @include flex-sbw;
+    align-items: flex-end;
+    text-overflow: ellipsis;
 }
+
 
 @mixin btn-confirmation {
     width: 60px;

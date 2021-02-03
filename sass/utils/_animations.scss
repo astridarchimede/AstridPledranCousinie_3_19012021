@@ -1,5 +1,52 @@
-.like
-{
+@keyframes color-change {
+    0%{color: $color-primary;}
+    50%{color: $color-secondary;}
+    100%{color: $color-tertiary;}
+}
+
+.loading_spinner{
+    display: block;
+    z-index: 1000;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    &__title{
+        animation: color-change 1s infinite;
+        animation-direction: alternate-reverse;
+    }
+    .letter01{
+        animation-delay: 0;
+    }
+    .letter02{
+        animation-delay: 0.1s;
+    }
+    .letter03{
+        animation-delay: 0.2s;
+    }
+    .letter04{
+        animation-delay: 0.3s;
+    }
+    .letter05{
+        animation-delay: 0.4s;
+    }
+    .letter06{
+        animation-delay: 0.5s;
+    }
+    .letter07{
+        animation-delay: 0.6s;
+    }
+    .letter08{
+        animation-delay: 0.7s;
+    }
+}
+
+
+
+.like{
     position: relative;
     right: 20px;
     top: 7px;
@@ -25,8 +72,7 @@
 
 .menu__blocplat:hover{
     .btn-confirmation {
-        transform: translateX(-67px);
-        opacity: 1;
+        transform: translateX(-55px);
         transition: 1s ease-in-out;   
         position: relative;
         animation-name: btn-conf;
@@ -43,6 +89,6 @@
         transform:translateX(0px);
     }
     100%{
-        transform:translateX(-67px);        
+        transform:translateX(-55px);        
     }
 }

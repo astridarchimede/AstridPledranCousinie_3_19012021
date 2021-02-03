@@ -214,11 +214,10 @@ ul
         }
         &__blocplat{
         @include bloc-plat;
-        text-overflow: ellipsis;
         @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
             margin: 15px;
         }
-        }      
+        }
         &__intitule{
             padding: 15px;
             white-space: nowrap;
