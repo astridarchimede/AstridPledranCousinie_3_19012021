@@ -19,18 +19,10 @@
 }
 
 .btn-confirmation{
-    display: none;
     @include btn-confirmation;
+    position: absolute;
+    right: -60px;
     &__check{
         @include check-confirmation;
-    }
-}
-
-.menu__blocplat:hover{
-    .btn-confirmation {
-        display: block;
-        transform: translateX(-100px,0);    
-        animation-name: validation-commande;
-        animation-duration: 3000ms;
     }
 }

@@ -275,7 +275,8 @@ ul {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      cursor: pointer; }
+      cursor: pointer;
+      text-overflow: ellipsis; }
       @media (min-width: 1025px) {
         .pageresto__bg .menu__blocplat {
           margin: 15px; } }
@@ -306,23 +307,17 @@ ul {
   text-align: center; }
 
 .btn-confirmation {
-  display: none;
-  height: 100%;
   width: 60px;
   background-color: #99E2D0;
-  border-radius: 0 20px 20px 0; }
+  border-radius: 0 20px 20px 0;
+  position: absolute;
+  right: -60px; }
   .btn-confirmation__check {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 68px;
     color: white; }
-
-.menu__blocplat:hover .btn-confirmation {
-  display: block;
-  transform: translateX(-100px, 0);
-  animation-name: validation-commande;
-  animation-duration: 3000ms; }
 
 .like {
   position: relative;
@@ -340,5 +335,14 @@ ul {
   .like:hover .coeur-nobg {
     opacity: 0;
     transition: 1s; }
+
+.menu__blocplat:hover .btn-confirmation {
+  transform: translateX(-60px);
+  transition: 1s ease-in-out;
+  position: relative; }
+  .menu__blocplat:hover .btn-confirmation__check {
+    transform: rotate(360deg);
+    transition: 0.25s;
+    transition-delay: .5s; }
 
 /*# sourceMappingURL=style.css.map */

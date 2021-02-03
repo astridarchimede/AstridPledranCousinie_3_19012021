@@ -85,7 +85,6 @@
 }
 
 @mixin btn-confirmation {
-    height: 100%;
     width: 60px;
     background-color: $color-tertiary;
     @include border-right-radius;
