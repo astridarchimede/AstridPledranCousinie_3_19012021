@@ -21,7 +21,7 @@
 .btn-confirmation{
     @include btn-confirmation;
     position: absolute;
-    right: -60px;
+    right: -67px;
     &__check{
         @include check-confirmation;
     }

@@ -22,41 +22,27 @@
         }
     }
 }
-//    &:active{
-//////      .coeur-bg{
-//////       opacity: 1;
-//////       transition: 1s;
-//////       animation-fill-mode: forwards;
-//      }
-//      .coeur-nobg{
-//////       opacity: 0;
-//////       transition: 1s;
-//////       animation-fill-mode: forwards;
-//      } 
-//    }
-//}
 
 .menu__blocplat:hover{
     .btn-confirmation {
-        transform: translateX(-60px);
+        transform: translateX(-67px);
+        opacity: 1;
         transition: 1s ease-in-out;   
         position: relative;
+        animation-name: btn-conf;
         &__check{
-        transform: rotate(360deg);
-        transition: 0.25s;
-        transition-delay: .5s;
+            transform: rotate(360deg);
+            transition: 0.25s;
+            transition-delay: .5s;
         }
     }
 }
 
-//@keyframes btn-confirmation--opacity{
-//    0%{
-//        opacity: 0;
-//    }
-//    50%{
-//        opacity: 50%;
-//    }
-//    100%{
-//       opacity: 100%;
-//    }
-//}
+@keyframes btn-conf{
+    0%{
+        transform:translateX(0px);
+    }
+    100%{
+        transform:translateX(-67px);        
+    }
+}

@@ -281,7 +281,10 @@ ul {
         .pageresto__bg .menu__blocplat {
           margin: 15px; } }
     .pageresto__bg .menu__intitule {
-      padding: 15px; }
+      padding: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .pageresto__bg .menu__prix {
       padding: 0 20px 15px 0; }
 
@@ -311,7 +314,7 @@ ul {
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0;
   position: absolute;
-  right: -60px; }
+  right: -67px; }
   .btn-confirmation__check {
     display: flex;
     justify-content: center;
@@ -337,12 +340,20 @@ ul {
     transition: 1s; }
 
 .menu__blocplat:hover .btn-confirmation {
-  transform: translateX(-60px);
+  transform: translateX(-67px);
+  opacity: 1;
   transition: 1s ease-in-out;
-  position: relative; }
+  position: relative;
+  animation-name: btn-conf; }
   .menu__blocplat:hover .btn-confirmation__check {
     transform: rotate(360deg);
     transition: 0.25s;
     transition-delay: .5s; }
+
+@keyframes btn-conf {
+  0% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(-67px); } }
 
 /*# sourceMappingURL=style.css.map */
