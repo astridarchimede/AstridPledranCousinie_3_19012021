@@ -281,7 +281,6 @@ ul {
       width: 350px;
       height: 68px;
       border-radius: 20px;
-      display: flex;
       background-color: white;
       cursor: pointer;
       vertical-align: middle;
@@ -299,7 +298,8 @@ ul {
       overflow: hidden;
       text-overflow: ellipsis; }
     .pageresto__bg .menu__prix {
-      padding: 0 20px 15px 0; }
+      padding: 0 0 15px 300px;
+      position: absolute; }
 
 .btn {
   height: 50px;
@@ -410,6 +410,9 @@ ul {
     opacity: 0;
     transition: 1s; }
 
+.menu__blocplat:hover .menu__prix {
+  transform: translateX(-50px);
+  transition: 1s ease-in-out; }
 .menu__blocplat:hover .btn-confirmation {
   transform: translateX(-67px);
   transition: all 1s ease-out;
@@ -419,6 +422,9 @@ ul {
     transition: 0.25s;
     transition-delay: .5s; }
 
+.menu__blocplat:not(:hover) .menu__prix {
+  transform: translateX(0px);
+  transition: 1s ease-in-out; }
 .menu__blocplat:not(:hover) .btn-confirmation {
   transform: translateX(67px);
   transition: all 1s ease-out;

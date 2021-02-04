@@ -77,7 +77,6 @@
     width: 350px;
     height: 68px;
     @include border-radius-main;
-    display: flex;
     background-color: white;
     cursor: pointer;
     vertical-align: middle;
@@ -86,7 +85,6 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
-
 
 @mixin btn-confirmation {
     width: 60px;
