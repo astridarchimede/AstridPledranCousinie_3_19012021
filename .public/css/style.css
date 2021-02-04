@@ -280,7 +280,7 @@ ul {
     .pageresto__bg .menu__blocplat {
       width: 350px;
       height: 68px;
-      border-radius: 15px;
+      border-radius: 0 20px 20px 0;
       display: flex;
       background-color: white;
       cursor: pointer;
@@ -288,7 +288,8 @@ ul {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      text-overflow: ellipsis; }
+      text-overflow: ellipsis;
+      overflow: hidden; }
       @media (min-width: 1025px) {
         .pageresto__bg .menu__blocplat {
           margin: 15px; } }
@@ -410,7 +411,7 @@ ul {
     transition: 1s; }
 
 .menu__blocplat:hover .btn-confirmation {
-  transform: translateX(-55px);
+  transform: translateX(-67px);
   transition: 1s ease-in-out;
   position: relative;
   animation-name: btn-conf; }

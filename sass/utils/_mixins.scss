@@ -76,7 +76,7 @@
 @mixin bloc-plat {
     width: 350px;
     height: 68px;
-    border-radius: 15px;
+    @include border-right-radius;
     display: flex;
     background-color: white;
     cursor: pointer;
@@ -84,6 +84,7 @@
     @include flex-sbw;
     align-items: flex-end;
     text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 

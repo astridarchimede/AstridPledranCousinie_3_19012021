@@ -1,3 +1,4 @@
+//LOADING SPINNER
 @keyframes color-change {
     0%{color: $color-primary;}
     50%{color: $color-secondary;}
@@ -48,8 +49,7 @@
     }
 }
 
-
-
+//Bouton LIKE
 .like{
     position: relative;
     right: 20px;
@@ -74,9 +74,11 @@
     }
 }
 
+//Bouton CONFIRMATION PLAT
+
 .menu__blocplat:hover{
     .btn-confirmation {
-        transform: translateX(-55px);
+        transform: translateX(-67px);
         transition: 1s ease-in-out;   
         position: relative;
         animation-name: btn-conf;
