@@ -79,9 +79,8 @@
 .menu__blocplat:hover{
     .btn-confirmation {
         transform: translateX(-67px);
-        transition: 1s ease-in-out;   
+        transition: all 1s ease-out;   
         position: relative;
-        animation-name: btn-conf;
         &__check{
             transform: rotate(360deg);
             transition: 0.25s;
@@ -89,12 +88,10 @@
         }
     }
 }
-
-@keyframes btn-conf{
-    0%{
-        transform:translateX(0px);
-    }
-    100%{
-        transform:translateX(-55px);        
+.menu__blocplat:not(:hover){
+    .btn-confirmation {
+        transform: translateX(67px);
+        transition: all 1s ease-out;   
+        position: relative;
     }
 }

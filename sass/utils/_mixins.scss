@@ -76,7 +76,7 @@
 @mixin bloc-plat {
     width: 350px;
     height: 68px;
-    @include border-right-radius;
+    @include border-radius-main;
     display: flex;
     background-color: white;
     cursor: pointer;
