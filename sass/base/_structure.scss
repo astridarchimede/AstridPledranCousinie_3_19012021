@@ -3,6 +3,11 @@ body,section,h1,h2,p,li,span
     margin:0;
 }
 
+main
+{
+    z-index: 2;
+}
+
 .container
 {
     padding:50px 20px 60px 20px;
@@ -140,7 +145,7 @@ ul
     }
 }
 
-.card
+.card__sousbloc
 {
     @include blocresto-mainpage;
     @include border-radius-main;
@@ -148,10 +153,6 @@ ul
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
         margin: 15px;       
     }
-}
-
-.card__sousbloc
-{
     img{
         height: 175px;
         @include border-top-radius
@@ -173,7 +174,8 @@ ul
 /*---------------------------------------- */
 .img-resto
 {
-    vertical-align: middle;
+    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-position: center;
     height: 260px;
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
         height: 450px;

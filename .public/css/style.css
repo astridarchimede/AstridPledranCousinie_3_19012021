@@ -39,10 +39,10 @@ footer > div {
 h1, h2, p, li, span, button {
   font-family: 'Roboto', sans-serif; }
 
-.h1resto, .loading_spinner__title {
+.h1resto, .loading__title {
   font-family: 'Shrikhand', cursive; }
 
-.loading_spinner__title {
+.loading__title {
   font-size: 60px;
   letter-spacing: -2px;
   color: #9356DC; }
@@ -94,6 +94,9 @@ a {
 
 body, section, h1, h2, p, li, span {
   margin: 0; }
+
+main {
+  z-index: 2; }
 
 .container {
   padding: 50px 20px 60px 20px; }
@@ -202,39 +205,39 @@ ul {
     .container-resto {
       flex-flow: row wrap; } }
 
-.card {
+.card__sousbloc {
   width: 330px;
   height: 250px;
   margin: 15px;
   border-radius: 20px;
   box-shadow: 1px 3px 10px grey; }
   @media (min-width: 768px) {
-    .card {
+    .card__sousbloc {
       margin: 15px; } }
-
-.card__sousbloc img {
-  height: 175px;
-  border-radius: 20px 20px 0 0; }
-.card__sousbloc .new {
-  background-color: #99E2D0;
-  color: #1b6150;
-  border-radius: 5px;
-  padding: 7px;
-  position: absolute;
-  margin: 10px 0 0 230px;
-  font-weight: 500; }
-.card__sousbloc figcaption {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px; }
-  .card__sousbloc figcaption > div > h2 {
-    margin-bottom: 5px; }
+  .card__sousbloc img {
+    height: 175px;
+    border-radius: 20px 20px 0 0; }
+  .card__sousbloc .new {
+    background-color: #99E2D0;
+    color: #1b6150;
+    border-radius: 5px;
+    padding: 7px;
+    position: absolute;
+    margin: 10px 0 0 250px;
+    font-weight: 500; }
+  .card__sousbloc figcaption {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px; }
+    .card__sousbloc figcaption > div > h2 {
+      margin-bottom: 5px; }
 
 /* ---------------------------------------- */
 /* == PAGE RESTO */
 /*---------------------------------------- */
 .img-resto {
-  vertical-align: middle;
+  background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: center;
   height: 260px; }
   @media (min-width: 768px) {
     .img-resto {
@@ -338,34 +341,55 @@ ul {
     color: #FF79DA; }
   100% {
     color: #99E2D0; } }
-.loading_spinner {
-  display: block;
-  z-index: 1000;
+@keyframes full-screen {
+  0% {
+    opacity: 1;
+    z-index: 999;
+    width: 100%;
+    height: 100%; }
+  50% {
+    opacity: 1;
+    z-index: 999;
+    width: 100%;
+    height: 100%; }
+  70% {
+    opacity: 1;
+    z-index: 999;
+    width: 100%;
+    height: 100%; }
+  71% {
+    opacity: 0.25; }
+  74% {
+    opacity: 0; }
+  100% {
+    opacity: 0;
+    z-index: 1;
+    width: 0%;
+    height: 0%; } }
+.loading {
+  position: fixed;
   background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: auto;
-  width: 100%;
-  height: 100%; }
-  .loading_spinner__title {
-    animation: color-change 1s infinite;
-    animation-direction: alternate-reverse; }
-  .loading_spinner .letter01 {
-    animation-delay: 0; }
-  .loading_spinner .letter02 {
+  text-align: center;
+  padding-top: 10%;
+  opacity: 0;
+  animation: full-screen 4s both; }
+  .loading__title {
+    animation: color-change 4s;
+    animation-direction: alternate-reverse;
+    vertical-align: middle; }
+  .loading .letter02 {
     animation-delay: 0.1s; }
-  .loading_spinner .letter03 {
+  .loading .letter03 {
     animation-delay: 0.2s; }
-  .loading_spinner .letter04 {
+  .loading .letter04 {
     animation-delay: 0.3s; }
-  .loading_spinner .letter05 {
+  .loading .letter05 {
     animation-delay: 0.4s; }
-  .loading_spinner .letter06 {
+  .loading .letter06 {
     animation-delay: 0.5s; }
-  .loading_spinner .letter07 {
+  .loading .letter07 {
     animation-delay: 0.6s; }
-  .loading_spinner .letter08 {
+  .loading .letter08 {
     animation-delay: 0.7s; }
 
 .like {

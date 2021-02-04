@@ -24,16 +24,6 @@
     justify-content: center;
 }
 
-@mixin new {
-    background-color: $color-tertiary;
-    color: $darken-tertiary;
-    border-radius: 5px;
-    padding: 7px;
-    position:absolute;
-    margin: 10px 0 0 230px;
-    font-weight: 500;
-}
-
 @mixin hover-ligthen{
     box-shadow: 1px 3px 14px grey;
     background: $lighten-colors-gradient;
@@ -57,6 +47,16 @@
 
 @mixin bnt--w185 {
     width: 185px;
+}
+
+@mixin new {
+    background-color: $color-tertiary;
+    color: $darken-tertiary;
+    border-radius: 5px;
+    padding: 7px;
+    position:absolute;
+    margin: 10px 0 0 250px;
+    font-weight: 500;
 }
 
 @mixin blocresto-mainpage {
