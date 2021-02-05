@@ -1,6 +1,24 @@
+
+
+.img-resto--alafrancaise{
+    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.img-resto--lapalettedugout{
+    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+
+}
+
+.img-resto--ledelicedessens{
+    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.img-resto--lanoteenchantee{
+    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
 .img-resto
 {
-    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-position: center;
     height: 260px;
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
@@ -52,19 +70,23 @@
         }
         }
         &__intitule{
+            flex:1;
             padding: 15px 0 15px 15px;
+            width: auto;
+            @include hiddentext;
             &__text{
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
+                @include hiddentext;
             }
         }
         &__prix{
-            padding: 0 0 15px 300px;
-            position: absolute;
-            @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
-                padding: 0 0 15px 255px;
-            }
+            position: relative;
+            right: -35px;
+            top: 8px;
         }
     }
+}
+
+.like__pageresto{
+    background: none;
+    border: none;
 }

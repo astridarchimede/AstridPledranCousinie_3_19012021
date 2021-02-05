@@ -75,14 +75,7 @@
     }
 }
 
-.like__pageresto{
-    background: none;
-    border: none;
-    top: -10px;
-}
-
 //Bouton CONFIRMATION PLAT
-
 .menu__blocplat:hover{
     .menu__prix{
         transform: translateX(-60px);
@@ -99,6 +92,7 @@
         }
     }
 }
+
 .menu__blocplat:not(:hover){
     .menu__prix{
         transform: translateX(0px);
@@ -113,32 +107,57 @@
 
 //Bouton MENU
 @keyframes menu-page{
-    0%{opacity: 0;}
-    75%{opacity: 0.5;}
-    100%{opacity: 1;}
+    0%{opacity: 0; transform: translateY(-12px);}
+    25%{opacity: 0.1; transform: translateY(-9px);}
+    50%{opacity: 0.3; transform: translateY(-6px);}
+    75%{opacity: 0.5;transform: translateY(-3px);}
+    100%{opacity: 1;transform: translateY(0);}
+}
+
+@keyframes menu-page-desktop{
+    0%{opacity: 0; transform: translateX(-12px);}
+    25%{opacity: 0.1; transform: translateX(-9px);}
+    50%{opacity: 0.3; transform: translateX(-6px);}
+    75%{opacity: 0.5;transform: translateX(-3px);}
+    100%{opacity: 1;transform: translateX(0);}
 }
 
 .anim-menu__1{
     opacity: 0;
-   // transform: translateY(100px) 1s;
-    animation-name: menu-page;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
+    @media (max-width:map-get($map: $breakpoints, $key: desktop)) {
+    animation-name: menu-page;
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page-desktop;
+    }
+
 }
 .anim-menu__2{
     opacity: 0;
-    animation-name: menu-page;
-    animation-duration:  1s;
+    animation-duration:  1.2s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.1s;
     animation-fill-mode: forwards;
+    @media (max-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page;
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page-desktop;
+    }
 }
 .anim-menu__3{
     opacity: 0;
-    animation-name: menu-page;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-delay: 0.2s;
     animation-fill-mode: forwards;
+    @media (max-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page;
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page-desktop;
+    }
 }

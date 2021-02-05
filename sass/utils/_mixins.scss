@@ -79,9 +79,8 @@
     @include border-radius-main;
     background-color: white;
     cursor: pointer;
-    vertical-align: middle;
-    @include flex-sbw;
-    align-items: flex-end;
+    display: flex;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -96,4 +95,10 @@
     align-items: center;
     height: 68px;
     color: white;
+}
+
+@mixin hiddentext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
