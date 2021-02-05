@@ -32,7 +32,8 @@ footer > div {
         display: flex;
         justify-content: space-between;
         text-align: center;
-        padding: 0 200px 0 200px; } }
+        max-width: 900px;
+        margin: 30px auto auto auto; } }
     footer > div > ul li > a > i {
       width: 17px; }
 
@@ -95,6 +96,9 @@ a {
 body, section, h1, h2, p, li, span {
   margin: 0; }
 
+body {
+  margin: auto; }
+
 main {
   z-index: 2; }
 
@@ -153,7 +157,9 @@ ul {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  height: 270px; }
+  height: 270px;
+  max-width: 900px;
+  margin: auto; }
   @media (min-width: 1025px) {
     .container-fonctionnement {
       flex-direction: row;
@@ -203,7 +209,11 @@ ul {
   flex-wrap: wrap; }
   @media (min-width: 768px) {
     .container-resto {
-      flex-flow: row wrap; } }
+      display: grid;
+      grid-template-columns: repeat(2, 335px);
+      grid-template-rows: 255px;
+      grid-gap: 30px;
+      justify-content: center; } }
 
 .card__sousbloc {
   width: 330px;
@@ -213,7 +223,7 @@ ul {
   box-shadow: 1px 3px 10px grey; }
   @media (min-width: 768px) {
     .card__sousbloc {
-      margin: 15px; } }
+      margin: 0; } }
   .card__sousbloc img {
     height: 175px;
     border-radius: 20px 20px 0 0; }
@@ -231,75 +241,6 @@ ul {
     margin: 15px; }
     .card__sousbloc figcaption > div > h2 {
       margin-bottom: 5px; }
-
-/* ---------------------------------------- */
-/* == PAGE RESTO */
-/*---------------------------------------- */
-.img-resto {
-  background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-position: center;
-  height: 260px; }
-  @media (min-width: 768px) {
-    .img-resto {
-      height: 450px; } }
-
-.pageresto__bg {
-  border-radius: 20px 20px 0 0;
-  background-color: #F6F6F6;
-  padding: 35px 15px 80px 15px;
-  margin-top: -42px;
-  position: relative; }
-  .pageresto__bg .pageresto__head {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 35px; }
-    .pageresto__bg .pageresto__head i {
-      padding-right: 25px; }
-  .pageresto__bg .h2menu {
-    border-bottom: 3px solid #99E2D0;
-    width: 40px;
-    padding-bottom: 8px; }
-    @media (min-width: 768px) {
-      .pageresto__bg .h2menu {
-        font-size: 14px; } }
-    @media (min-width: 768px) and (max-width: 1025px) {
-      .pageresto__bg .h2menu {
-        margin-left: 20%; } }
-  .pageresto__bg .menu {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    height: 235px;
-    margin: 15px 0 35px 0; }
-    @media (min-width: 1025px) {
-      .pageresto__bg .menu {
-        flex-direction: row;
-        justify-content: center;
-        height: auto; } }
-    .pageresto__bg .menu__blocplat {
-      width: 350px;
-      height: 68px;
-      border-radius: 20px;
-      background-color: white;
-      cursor: pointer;
-      vertical-align: middle;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      text-overflow: ellipsis;
-      overflow: hidden; }
-      @media (min-width: 1025px) {
-        .pageresto__bg .menu__blocplat {
-          margin: 15px; } }
-    .pageresto__bg .menu__intitule {
-      padding: 15px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    .pageresto__bg .menu__prix {
-      padding: 0 0 15px 300px;
-      position: absolute; }
 
 .btn {
   height: 50px;
@@ -361,19 +302,20 @@ ul {
   71% {
     opacity: 0.25; }
   74% {
-    opacity: 0; }
+    opacity: 0;
+    z-index: 1; }
   100% {
     opacity: 0;
     z-index: 1;
-    width: 0%;
-    height: 0%; } }
+    width: 0;
+    height: 0; } }
 .loading {
   position: fixed;
   background-color: white;
   text-align: center;
   padding-top: 10%;
   opacity: 0;
-  animation: full-screen 4s both; }
+  animation: full-screen 4s both ease-out; }
   .loading__title {
     animation: color-change 4s;
     animation-direction: alternate-reverse;
@@ -396,7 +338,8 @@ ul {
 .like {
   position: relative;
   right: 20px;
-  top: 7px; }
+  top: 7px;
+  cursor: pointer; }
   .like .coeur-bg {
     opacity: 0;
     color: #FF79DA;
@@ -410,8 +353,13 @@ ul {
     opacity: 0;
     transition: 1s; }
 
+.like__pageresto {
+  background: none;
+  border: none;
+  top: -10px; }
+
 .menu__blocplat:hover .menu__prix {
-  transform: translateX(-50px);
+  transform: translateX(-60px);
   transition: 1s ease-in-out; }
 .menu__blocplat:hover .btn-confirmation {
   transform: translateX(-67px);
@@ -441,14 +389,14 @@ ul {
   opacity: 0;
   animation-name: menu-page;
   animation-duration: 1s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; }
 
 .anim-menu__2 {
   opacity: 0;
   animation-name: menu-page;
   animation-duration: 1s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   animation-delay: 0.1s;
   animation-fill-mode: forwards; }
 
@@ -456,8 +404,81 @@ ul {
   opacity: 0;
   animation-name: menu-page;
   animation-duration: 1s;
-  animation-timing-function: ease;
+  animation-timing-function: ease-in-out;
   animation-delay: 0.2s;
   animation-fill-mode: forwards; }
+
+.img-resto {
+  background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: center;
+  height: 260px; }
+  @media (min-width: 768px) {
+    .img-resto {
+      height: 450px; } }
+
+.container--maxwidth {
+  max-width: 900px;
+  margin: auto; }
+
+.pageresto__bg {
+  border-radius: 20px 20px 0 0;
+  background-color: #F6F6F6;
+  padding: 35px 15px 80px 15px;
+  margin-top: -42px;
+  position: relative; }
+  .pageresto__bg .pageresto__head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 35px; }
+    .pageresto__bg .pageresto__head i {
+      padding-right: 25px; }
+  .pageresto__bg .h2menu {
+    border-bottom: 3px solid #99E2D0;
+    width: 40px;
+    padding-bottom: 8px; }
+    @media (min-width: 768px) {
+      .pageresto__bg .h2menu {
+        font-size: 14px; } }
+    @media (min-width: 768px) and (max-width: 1025px) {
+      .pageresto__bg .h2menu {
+        margin-left: 20%; } }
+  .pageresto__bg .menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height: 235px;
+    margin: 15px 0 35px 0; }
+    @media (min-width: 1025px) {
+      .pageresto__bg .menu {
+        flex-direction: row;
+        justify-content: center;
+        height: auto; } }
+    .pageresto__bg .menu__blocplat {
+      width: 350px;
+      height: 68px;
+      border-radius: 20px;
+      background-color: white;
+      cursor: pointer;
+      vertical-align: middle;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      overflow: hidden; }
+      @media (min-width: 1025px) {
+        .pageresto__bg .menu__blocplat {
+          margin: 5px; } }
+    .pageresto__bg .menu__intitule {
+      padding: 15px 0 15px 15px; }
+      .pageresto__bg .menu__intitule__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; }
+    .pageresto__bg .menu__prix {
+      padding: 0 0 15px 300px;
+      position: absolute; }
+      @media (min-width: 1025px) {
+        .pageresto__bg .menu__prix {
+          padding: 0 0 15px 255px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,7 +14,8 @@ footer>div
         @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
             @include flex-sbw;
             text-align: center;
-            padding: 0 200px 0 200px;
+            max-width: $container-maxwidth;
+            margin: 30px auto auto auto;
         }
         li>a>i{
         width: 17px; 

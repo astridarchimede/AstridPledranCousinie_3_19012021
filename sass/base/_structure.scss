@@ -3,6 +3,10 @@ body,section,h1,h2,p,li,span
     margin:0;
 }
 
+body{
+    margin: auto;
+}
+
 main
 {
     z-index: 2;
@@ -87,6 +91,8 @@ ul
     @include flex-sbw;
     flex-direction: column;
     height: 270px;
+    max-width: $container-maxwidth;
+    margin: auto;
     @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
         flex-direction: row;
         justify-content: space-around;
@@ -140,8 +146,12 @@ ul
 {
     @include flex-c;
     flex-wrap: wrap;
-    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
-        flex-flow: row wrap;
+    @media (min-width:map-get($map: $breakpoints, $key:tablette)) {
+        display: grid;
+        grid-template-columns: repeat(2,335px);
+        grid-template-rows: 255px;
+        grid-gap:30px;
+        justify-content: center;
     }
 }
 
@@ -151,7 +161,7 @@ ul
     @include border-radius-main;
     @include box-shadow;
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
-        margin: 15px;       
+        margin: 0;       
     }
     img{
         height: 175px;
@@ -165,70 +175,6 @@ ul
         margin: 15px;
         >div>h2{
             margin-bottom: 5px;
-        }
-    }
-}
-
-/* ---------------------------------------- */
-/* == PAGE RESTO */
-/*---------------------------------------- */
-.img-resto
-{
-    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-position: center;
-    height: 260px;
-    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
-        height: 450px;
-    }
-}
-
-.pageresto__bg
-{
-    @include bg-pageresto;
-    .pageresto__head{
-        @include flex-sbw;
-        padding-bottom: 35px;
-        i{
-            padding-right: 25px;
-        }
-    }
-    .h2menu{
-        border-bottom: 3px solid $color-tertiary;
-        width: 40px;
-        padding-bottom: 8px;
-        @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
-            font-size: 14px;
-        }
-        @media (min-width:map-get($map: $breakpoints, $key: tablette))and (max-width:map-get($map: $breakpoints, $key: desktop)) {
-            margin-left: 20%; 
-        }
-    }
-    .menu{
-        @include flex-sbw;
-        flex-direction: column;
-        align-items: center;
-        height: 235px;
-        margin: 15px 0 35px 0;
-        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
-            flex-direction: row;
-            justify-content: center;
-            height: auto;
-        }
-        &__blocplat{
-        @include bloc-plat;
-        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
-            margin: 15px;
-        }
-        }
-        &__intitule{
-            padding: 15px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        &__prix{
-            padding: 0 0 15px 300px;
-            position: absolute;
         }
     }
 }

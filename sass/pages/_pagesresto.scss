@@ -1,0 +1,70 @@
+.img-resto
+{
+    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-position: center;
+    height: 260px;
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        height: 450px;
+    }
+}
+
+.container--maxwidth{
+    max-width: $container-maxwidth;
+    margin: auto;
+}
+
+.pageresto__bg
+{
+    @include bg-pageresto;
+    .pageresto__head{
+        @include flex-sbw;
+        padding-bottom: 35px;
+        i{
+            padding-right: 25px;
+        }
+    }
+    .h2menu{
+        border-bottom: 3px solid $color-tertiary;
+        width: 40px;
+        padding-bottom: 8px;
+        @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+            font-size: 14px;
+        }
+        @media (min-width:map-get($map: $breakpoints, $key: tablette))and (max-width:map-get($map: $breakpoints, $key: desktop)) {
+            margin-left: 20%; 
+        }
+    }
+    .menu{
+        @include flex-sbw;
+        flex-direction: column;
+        align-items: center;
+        height: 235px;
+        margin: 15px 0 35px 0;
+        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+            flex-direction: row;
+            justify-content: center;
+            height: auto;
+        }
+        &__blocplat{
+        @include bloc-plat;
+        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+            margin: 5px;
+        }
+        }
+        &__intitule{
+            padding: 15px 0 15px 15px;
+            &__text{
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        &__prix{
+            padding: 0 0 15px 300px;
+            position: absolute;
+            @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+                padding: 0 0 15px 255px;
+            }
+        }
+    }
+}
