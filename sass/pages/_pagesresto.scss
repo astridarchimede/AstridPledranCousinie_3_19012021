@@ -81,6 +81,7 @@
             width: auto;
             @include hiddentext;
             &__text{
+                width: auto;
                 @include hiddentext;
             }
         }

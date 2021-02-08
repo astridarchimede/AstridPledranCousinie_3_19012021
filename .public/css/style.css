@@ -363,6 +363,9 @@ ul {
     opacity: 0;
     transition: 1s; }
 
+.menu__blocplat:hover .menu__intitule__text {
+  width: 200px;
+  transition: width 1s; }
 .menu__blocplat:hover .menu__prix {
   transform: translateX(-60px);
   transition: 1s ease-in-out; }
@@ -558,6 +561,7 @@ ul {
       overflow: hidden;
       text-overflow: ellipsis; }
       .pageresto__bg .menu__intitule__text {
+        width: auto;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis; }

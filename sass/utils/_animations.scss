@@ -78,6 +78,10 @@
 
 //Bouton CONFIRMATION PLAT
 .menu__blocplat:hover{
+    .menu__intitule__text{
+        width :200px;
+        transition: width 1s;
+    }
     .menu__prix{
         transform: translateX(-60px);
         transition: 1s ease-in-out;
