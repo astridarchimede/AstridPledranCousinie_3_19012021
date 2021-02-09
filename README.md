@@ -5,7 +5,7 @@ PROJET OHMYFOOD - LIVRABLES ATTENDUS </br></br>
 ● Affichage de la localisation des restaurants. À terme il sera possible de choisir sa localisation pour trouver des restaurants proches d’un certain lieu.</br>
 ● Une courte présentation de l’entreprise.</br>
 ● Une section contenant les 4 menus sous forme cartes. Au clic sur la carte, l’utilisateur est redirigé vers la page du menu.</br></br>
-Pages de menu (x4)</br>
+*Pages de menu (x4)</br>
 ● 4 pages contenant chacune le menu d’un restaurant.</br>
 *Footer</br>
 ● Le footer est identique sur toutes les pages.</br>
@@ -15,7 +15,7 @@ Pages de menu (x4)</br>
 ● Sur la page d’accueil, il contient le logo du site.</br>
 ● Sur les pages de menu, il contient en plus un bouton de retour vers la page d’accueil</br></br>
 </br>EFFETS GRAPHIQUES ET ANIMATIONS</br>
-Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils devront utiliser les animations ou transitions CSS, pas de JavaScript ni de librairie.</br></br>
+Les effets accessibles au clic ou au survol sont visibles sur la maquette. Ils devront utiliser les animations ou transitions CSS, pas de JavaScript ni de librairie.</br>
 *Boutons</br>
 ● Au survol, la couleur de fond des boutons principaux devra légèrement s’éclaircir. L’ombre portée devra également être plus visible.</br>
 ● À terme, les visiteurs pourront sauvegarder leurs menus préférés. Pour ça, un bouton "J’aime" en forme de cœur est présent sur la maquette. Au clic, il devra se remplir progressivement. Pour cette première version, l’effet peut être apparaître au survol sur desktop au lieu du clic.</br></br>
