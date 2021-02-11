@@ -113,7 +113,7 @@
 
 .menu__blocplat:not(:hover){
     .menu__intitule__text{
-        animation: reverse-cesure 0.7s ease-in-out;
+        animation: reverse-cesure .7s ease-in-out;
     }
     .menu__prix{
         transform: translateX(0px);

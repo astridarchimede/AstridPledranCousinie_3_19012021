@@ -380,7 +380,7 @@ ul {
     transition-delay: .5s; }
 
 .menu__blocplat:not(:hover) .menu__intitule__text {
-  animation: reverse-cesure 0.7s ease-in-out; }
+  animation: reverse-cesure .7s ease-in-out; }
 .menu__blocplat:not(:hover) .menu__prix {
   transform: translateX(0px);
   transition: .7s ease-in-out; }
@@ -562,8 +562,7 @@ ul {
       .pageresto__bg .menu__intitule__text {
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
-        width: auto; }
+        text-overflow: ellipsis; }
     .pageresto__bg .menu__prix {
       position: relative;
       right: -35px;
