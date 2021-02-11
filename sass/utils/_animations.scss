@@ -77,10 +77,23 @@
 }
 
 //Bouton CONFIRMATION PLAT
+@keyframes cesure{
+    0%{width:200px}
+    25%{width:195px}
+    50%{width:190px}
+    100%{width:185px}
+}
+
+@keyframes reverse-cesure{
+    0%{width:185px}
+    25%{width:190px}
+    50%{width:195px}
+    100%{width:200px}
+}
+
 .menu__blocplat:hover{
     .menu__intitule__text{
-        width :70%;
-        transition: width 1s ease-in-out;
+        animation: cesure 1s ease-in-out forwards;
     }
     .menu__prix{
         transform: translateX(-60px);
@@ -99,9 +112,12 @@
 }
 
 .menu__blocplat:not(:hover){
+    .menu__intitule__text{
+        animation: reverse-cesure 0.7s ease-in-out;
+    }
     .menu__prix{
         transform: translateX(0px);
-        transition: 1s ease-in-out;
+        transition: .7s ease-in-out;
     }
     .btn-confirmation {
         transform: translateX(67px);

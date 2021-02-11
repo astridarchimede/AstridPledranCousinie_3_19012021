@@ -1,7 +1,7 @@
 
 
 .img-resto--alafrancaise{
-    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/smalltoa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/small/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
         background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     }
@@ -78,11 +78,9 @@
         &__intitule{
             flex:1;
             padding: 15px 0 15px 15px;
-            width: auto;
-            @include hiddentext;
             &__text{
-                width: auto;
                 @include hiddentext;
+                width: auto;
             }
         }
         &__prix{

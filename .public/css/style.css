@@ -347,9 +347,26 @@ ul {
     opacity: 0;
     transition: 1s; }
 
+@keyframes cesure {
+  0% {
+    width: 200px; }
+  25% {
+    width: 195px; }
+  50% {
+    width: 190px; }
+  100% {
+    width: 185px; } }
+@keyframes reverse-cesure {
+  0% {
+    width: 185px; }
+  25% {
+    width: 190px; }
+  50% {
+    width: 195px; }
+  100% {
+    width: 200px; } }
 .menu__blocplat:hover .menu__intitule__text {
-  width: 70%;
-  transition: width 1s ease-in-out; }
+  animation: cesure 1s ease-in-out forwards; }
 .menu__blocplat:hover .menu__prix {
   transform: translateX(-60px);
   transition: 1s ease-in-out; }
@@ -362,9 +379,11 @@ ul {
     transition: 0.25s;
     transition-delay: .5s; }
 
+.menu__blocplat:not(:hover) .menu__intitule__text {
+  animation: reverse-cesure 0.7s ease-in-out; }
 .menu__blocplat:not(:hover) .menu__prix {
   transform: translateX(0px);
-  transition: 1s ease-in-out; }
+  transition: .7s ease-in-out; }
 .menu__blocplat:not(:hover) .btn-confirmation {
   transform: translateX(67px);
   transition: all 1s ease-out;
@@ -457,7 +476,7 @@ ul {
       animation-name: menu-page-desktop; } }
 
 .img-resto--alafrancaise {
-  background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/smalltoa-heftiba-DQKerTsQwi0-unsplash.jpg"); }
+  background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/small/toa-heftiba-DQKerTsQwi0-unsplash.jpg"); }
   @media (min-width: 768px) {
     .img-resto--alafrancaise {
       background-image: url("file:///Users/archimede/Documents/OPENCLASSROOMS/LIVRABLES/P3/AstridPledranCousnie_3_19012021/images/restaurants/medium/toa-heftiba-DQKerTsQwi0-unsplash.jpg"); } }
@@ -539,16 +558,12 @@ ul {
           margin: 5px; } }
     .pageresto__bg .menu__intitule {
       flex: 1;
-      padding: 15px 0 15px 15px;
-      width: auto;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
+      padding: 15px 0 15px 15px; }
       .pageresto__bg .menu__intitule__text {
-        width: auto;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis; }
+        text-overflow: ellipsis;
+        width: auto; }
     .pageresto__bg .menu__prix {
       position: relative;
       right: -35px;
