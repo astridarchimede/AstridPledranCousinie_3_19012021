@@ -1,5 +1,5 @@
 {
-  "name": "astridpledrancousnie_3_19012021",
+  "name": "p3_sauvegarde",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/astridarchimede/AstridPledranCousinie_3_19012021.git"
+    "url": "git+https://github.com/astridarchimede/p3_sauvegarde.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/astridarchimede/AstridPledranCousinie_3_19012021/issues"
+    "url": "https://github.com/astridarchimede/p3_sauvegarde/issues"
   },
-  "homepage": "https://github.com/astridarchimede/AstridPledranCousinie_3_19012021#readme"
+  "homepage": "https://github.com/astridarchimede/p3_sauvegarde#readme"
 }
