@@ -243,6 +243,7 @@ ul {
       margin-bottom: 5px; }
 
 .btn {
+  cursor: pointer;
   height: 50px;
   border-radius: 80px;
   border: none;
@@ -366,13 +367,13 @@ ul {
   100% {
     width: 200px; } }
 .menu__blocplat:hover .menu__intitule__text {
-  animation: cesure 1s ease-in-out forwards; }
+  animation: cesure .8s forwards; }
 .menu__blocplat:hover .menu__prix {
   transform: translateX(-60px);
   transition: 1s ease-in-out; }
 .menu__blocplat:hover .btn-confirmation {
   transform: translateX(-67px);
-  transition: all 1s ease-out;
+  transition: all .9s ease-out;
   position: relative; }
   .menu__blocplat:hover .btn-confirmation__check {
     transform: rotate(360deg);
@@ -380,7 +381,7 @@ ul {
     transition-delay: .5s; }
 
 .menu__blocplat:not(:hover) .menu__intitule__text {
-  animation: reverse-cesure .7s ease-in-out; }
+  animation: reverse-cesure .5s; }
 .menu__blocplat:not(:hover) .menu__prix {
   transform: translateX(0px);
   transition: .7s ease-in-out; }

@@ -93,7 +93,7 @@
 
 .menu__blocplat:hover{
     .menu__intitule__text{
-        animation: cesure 1s ease-in-out forwards;
+        animation: cesure .8s forwards;
     }
     .menu__prix{
         transform: translateX(-60px);
@@ -101,7 +101,7 @@
     }
     .btn-confirmation {
         transform: translateX(-67px);
-        transition: all 1s ease-out;   
+        transition: all .9s ease-out;   
         position: relative;
         &__check{
             transform: rotate(360deg);
@@ -113,7 +113,7 @@
 
 .menu__blocplat:not(:hover){
     .menu__intitule__text{
-        animation: reverse-cesure .7s ease-in-out;
+        animation: reverse-cesure .5s;
     }
     .menu__prix{
         transform: translateX(0px);

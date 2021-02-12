@@ -1,5 +1,6 @@
 .btn
 {
+    cursor: pointer;
     @include button;
     &.bnt--w220{
         @include bnt--w220;
