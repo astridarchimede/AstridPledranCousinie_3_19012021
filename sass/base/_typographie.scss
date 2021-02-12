@@ -1,0 +1,91 @@
+h1,h2,p,li,span,button
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+.h1resto, .loading__title
+{
+    font-family: 'Shrikhand', cursive;
+}
+
+.loading__title
+{
+    font-size: 60px;
+    letter-spacing: -2px;
+    color: $color-primary;
+}
+
+h1
+{
+    font-size: 18px;
+}
+
+.h1resto
+{
+    font-size: 25px;
+}
+
+h2,p,li,span,.t12,button
+{
+    font-size: 12px;
+}
+
+.card__sousbloc>figcaption>div>h2
+{
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        font-size: 14px;
+    }
+}
+
+.t15
+{
+    font-size: 15px;
+}
+
+.t20
+{
+    font-size: 20px;
+}
+
+.typo-light
+{
+    font-weight: 200;
+}
+
+.typo-bold5
+{
+    font-weight: 500;
+}
+
+.typo-bold7
+{
+    font-weight: 700;
+}
+
+.majuscule
+{
+    text-transform: uppercase;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.bloc-centre
+{
+    text-align: center;
+}
+
+.h1main
+{
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        text-align: center;
+    }
+}

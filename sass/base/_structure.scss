@@ -1,0 +1,180 @@
+body,section,h1,h2,p,li,span
+{
+    margin:0;
+}
+
+body{
+    margin: auto;
+}
+
+main
+{
+    z-index: 500;
+}
+
+.container
+{
+    padding:50px 20px 60px 20px;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+ul
+{
+    padding: 0;
+}
+
+.c-middlegrey
+{
+    color: $middle-grey;
+}
+
+.c-primarycolor
+{
+    color: $color-primary;
+}
+
+/* ---------------------------------------- */
+/* == BACKGROUND_COLOR */
+/*---------------------------------------- */
+.bg-warmgrey
+{
+    background-color: $warm-grey;
+}
+
+.bg-extrawarmgrey
+{
+    background-color: $extra-warm-grey;
+}
+
+.bg-lightgrey
+{
+    background-color: $light-grey;
+}
+
+/* ---------------------------------------- */
+/* == SECTION 1 */
+/*---------------------------------------- */
+.bloc-ville
+{
+    padding: 15px;
+    color: $extra-warm-grey;
+}
+
+/* ---------------------------------------- */
+/* == SECTION 2 */
+/*---------------------------------------- */
+.presentation
+{
+    padding: 35px;
+    &__sousbloc {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+/* ---------------------------------------- */
+/* == SECTION 3*/
+/*---------------------------------------- */
+.h1main
+{
+    margin-bottom: 30px;
+}
+
+.container-fonctionnement
+{
+    @include flex-sbw;
+    flex-direction: column;
+    height: 270px;
+    max-width: $container-maxwidth;
+    margin: auto;
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        flex-direction: row;
+        justify-content: space-around;
+        height: auto;
+    }
+    .bloc-fonctionnement{
+        @include flex-c;
+        align-items: center;
+        @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+            margin: auto 15px auto 15px;
+        }
+        .rond-violet{
+        z-index: 1;
+        background-color: $color-primary;
+        color: white;
+        text-align: center;
+        border-radius: 100%;
+        width: 25px;
+        height: 25px;
+            >p{
+                padding: 5px;
+            }
+        }
+        &__sb{
+            display:flex;
+            align-items: center;
+            width: 320px;
+            height: 70px;
+            background-color: $demi-blanc;
+            margin-left: -10px;
+            padding-left: 35px;
+            @include border-radius-main;
+            @include box-shadow;
+            @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+                width: 270px;
+            }
+            >p{
+                padding-left: 30px;
+            }
+        }
+        .sb-fond-violet{
+            background-color: lighten($color-primary, $amount: 33%);
+        }
+    }
+}
+
+/* ---------------------------------------- */
+/* == SECTION 4 */
+/*---------------------------------------- */
+.container-resto
+{
+    @include flex-c;
+    flex-wrap: wrap;
+    @media (min-width:map-get($map: $breakpoints, $key:tablette)) {
+        display: grid;
+        grid-template-columns: repeat(2,335px);
+        grid-template-rows: 255px;
+        grid-gap:30px;
+        justify-content: center;
+    }
+}
+
+.card__sousbloc
+{
+    @include blocresto-mainpage;
+    @include border-radius-main;
+    @include box-shadow;
+    @media (min-width:map-get($map: $breakpoints, $key: tablette)) {
+        margin: 0;       
+    }
+    img{
+        height: 175px;
+        @include border-top-radius
+    }
+    .new{
+        @include new;
+    }
+    figcaption{
+        @include flex-sbw;
+        margin: 15px;
+        >div>h2{
+            margin-bottom: 5px;
+        }
+    }
+}

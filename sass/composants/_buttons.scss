@@ -1,0 +1,28 @@
+.btn
+{
+    @include button;
+    &.bnt--w220{
+        @include bnt--w220;
+    }
+    &.btn--w185{
+        @include bnt--w185;
+    }
+}
+
+.presentation>.btn 
+{
+    margin:15px 0 10px 0;
+}
+
+.div-btn-menu{
+    text-align: center;
+}
+
+.btn-confirmation{
+    @include btn-confirmation;
+    position: absolute;
+    right: -67px;
+    &__check{
+        @include check-confirmation;
+    }
+}

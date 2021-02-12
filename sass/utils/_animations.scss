@@ -1,0 +1,198 @@
+//LOADING SPINNER
+@keyframes color-change {
+    0%{color: $color-primary;}
+    50%{color: $color-secondary;}
+    100%{color: $color-tertiary;}
+}
+
+@keyframes full-screen {
+    0%{opacity: 1; z-index: 999;}
+    50%{opacity: 1; z-index: 999;}
+    70%{opacity: 0.25; z-index: 999;}
+    75%{opacity: 0.10; z-index: 999;}
+    80%{opacity: 0; z-index: 999;}
+    100%{opacity: 0;visibility: hidden;}
+}
+
+.loading{
+    position: fixed;
+    width: 100%; 
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    padding-top: 10%;
+    animation: full-screen 4s both ease-out;
+    &__title{
+        animation: color-change 4s;
+        animation-direction: alternate-reverse;
+        vertical-align: middle;
+    }
+    .letter02{
+        animation-delay: 0.1s;
+    }
+    .letter03{
+        animation-delay: 0.2s;
+    }
+    .letter04{
+        animation-delay: 0.3s;
+    }
+    .letter05{
+        animation-delay: 0.4s;
+    }
+    .letter06{
+        animation-delay: 0.5s;
+    }
+    .letter07{
+        animation-delay: 0.6s;
+    }
+    .letter08{
+        animation-delay: 0.7s;
+    }
+}
+
+//Bouton LIKE
+.like{
+    position: relative;
+    right: 20px;
+    top: 7px;
+    cursor: pointer;
+    .coeur-bg{
+        opacity: 0;
+        color: $color-secondary;
+        position: absolute;
+    }
+    .coeur-nobg{
+        position: absolute;
+    }
+    &:hover{
+        .coeur-bg{
+            opacity: 1;
+            transition: 1s;
+        }
+        .coeur-nobg{
+            opacity: 0;
+            transition: 1s;
+        }
+    }
+}
+
+//Bouton CONFIRMATION PLAT
+@keyframes cesure{
+    0%{width:200px}
+    25%{width:195px}
+    50%{width:190px}
+    100%{width:185px}
+}
+
+@keyframes reverse-cesure{
+    0%{width:185px}
+    25%{width:190px}
+    50%{width:195px}
+    100%{width:200px}
+}
+
+.menu__blocplat:hover{
+    .menu__intitule__text{
+        animation: cesure 1s ease-in-out forwards;
+    }
+    .menu__prix{
+        transform: translateX(-60px);
+        transition: 1s ease-in-out;
+    }
+    .btn-confirmation {
+        transform: translateX(-67px);
+        transition: all 1s ease-out;   
+        position: relative;
+        &__check{
+            transform: rotate(360deg);
+            transition: 0.25s;
+            transition-delay: .5s;
+        }
+    }
+}
+
+.menu__blocplat:not(:hover){
+    .menu__intitule__text{
+        animation: reverse-cesure .7s ease-in-out;
+    }
+    .menu__prix{
+        transform: translateX(0px);
+        transition: .7s ease-in-out;
+    }
+    .btn-confirmation {
+        transform: translateX(67px);
+        transition: all 1s ease-out;   
+        position: relative;
+    }
+}
+
+//Bouton MENU
+@keyframes menu-page{
+    0%{opacity: 0; transform: translateY(-10px);}
+    20%{opacity: 0.3; transform: translateY(-8px);}
+    40%{opacity: 0.5; transform: translateY(-6px);}
+    60%{opacity: 0.7; transform: translateY(-4px);}
+    80%{opacity: 0.8;transform: translateY(-2px);}
+    100%{opacity: 1;transform: translateY(0);}
+}
+
+@keyframes menu-page-desktop{
+    0%{opacity: 0; transform: translateX(-12px);}
+    25%{opacity: 0.1; transform: translateX(-9px);}
+    50%{opacity: 0.3; transform: translateX(-6px);}
+    75%{opacity: 0.5;transform: translateX(-3px);}
+    100%{opacity: 1;transform: translateX(0);}
+}
+
+.anim-menu__1{
+    opacity: 0;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    @media (max-width:map-get($map: $breakpoints, $key: desktop)) {
+    animation-name: menu-page;
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page-desktop;
+    }
+
+}
+.anim-menu__2{
+    opacity: 0;
+    animation-duration:  1.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.1s;
+    animation-fill-mode: forwards;
+    @media (max-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page;
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page-desktop;
+    }
+}
+.anim-menu__3{
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
+    @media (max-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page;
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page-desktop;
+    }
+}
+.anim-menu__4{
+    opacity: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    @media (max-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page;
+    }
+    @media (min-width:map-get($map: $breakpoints, $key: desktop)) {
+        animation-name: menu-page-desktop;
+    }
+}

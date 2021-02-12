@@ -1,0 +1,113 @@
+@mixin box-shadow {
+    box-shadow: 1px 3px 10px grey;
+}
+
+@mixin border-radius-main {
+    border-radius: 20px;
+}
+
+@mixin border-top-radius {
+    border-radius: 20px 20px 0 0;
+}
+
+@mixin border-right-radius {
+    border-radius: 0 20px 20px 0;
+}
+
+@mixin flex-sbw {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin flex-c {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin hover-ligthen{
+    box-shadow: 1px 3px 14px grey;
+    background: $lighten-colors-gradient;
+}
+
+@mixin button {
+    height: 50px;
+    border-radius: 80px;
+    border: none;
+    background:$main-colors-gradient;
+    color: white;
+    @include box-shadow;
+    &:hover{
+        @include hover-ligthen;
+    }
+}
+
+@mixin bnt--w220 {
+    width: 220px;
+}
+
+@mixin bnt--w185 {
+    width: 185px;
+}
+
+@mixin new {
+    background-color: $color-tertiary;
+    color: $darken-tertiary;
+    border-radius: 5px;
+    padding: 7px;
+    position:absolute;
+    margin: 10px 0 0 250px;
+    font-weight: 500;
+}
+
+@mixin blocresto-mainpage {
+    width: 330px;
+    height: 250px;
+    margin: 15px;   
+}
+
+@mixin bg-pageresto {
+    border-radius: 20px 20px 0 0;
+    background-color: $light-grey;
+    padding: 35px 15px 80px 15px;
+    margin-top: -42px;
+    position: relative;
+}
+ 
+@mixin menu-type {
+    @include flex-sbw;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0 35px 0;
+}
+
+@mixin bloc-plat {
+    width: 350px;
+    height: 68px;
+    @include border-radius-main;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@mixin btn-confirmation {
+    width: 60px;
+    background-color: $color-tertiary;
+    @include border-right-radius;
+}
+
+@mixin check-confirmation {
+    @include flex-c;
+    align-items: center;
+    height: 68px;
+    color: white;
+}
+
+@mixin hiddentext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

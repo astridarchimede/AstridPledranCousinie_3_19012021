@@ -1,0 +1,21 @@
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+
+$extra-warm-grey: #353535;
+$warm-grey: #EAEAEA;
+$middle-grey:#7E7E7E;
+$light-grey: #F6F6F6;
+$demi-blanc:#F6F6F6;
+
+$container-maxwidth:800px;
+
+$main-colors-gradient:linear-gradient($color-secondary,$color-primary);
+$lighten-primary:lighten($color:$color-primary,$amount:5);
+$lighten-secondary:lighten($color:$color-secondary,$amount:5);
+$lighten-colors-gradient:linear-gradient($lighten-secondary,$lighten-primary);
+$darken-tertiary:darken($color-tertiary,$amount:50);
+$breakpoints:(
+    tablette:768px,
+    desktop:1024px
+)
