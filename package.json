@@ -1,5 +1,5 @@
 {
-  "name": "ohmyfood",
+  "name": "AstridPledranCousinie_3_19012021",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/astridarchimede/ohmyfood.git"
+    "url": "git+https://github.com/astridarchimede/AstridPledranCousinie_3_19012021.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/astridarchimede/ohmyfood/issues"
+    "url": "https://github.com/astridarchimede/AstridPledranCousinie_3_19012021/issues"
   },
-  "homepage": "https://github.com/astridarchimede/ohmyfood#readme"
+  "homepage": "https://github.com/astridarchimede/AstridPledranCousinie_3_19012021#readme"
 }
